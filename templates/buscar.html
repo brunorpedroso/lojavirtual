@@ -1,19 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Página de Busca de Produtos</title>
+    <meta charset="UTF-8">
+    <title>Buscar Produtos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f7fa;
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007acc;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            background-color: #ffffff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Buscar Produtos</h1>
-    <form method="post">
-        <input type="text" name="termo_busca" placeholder="Digite o termo de busca">
-        <button type="submit">Buscar</button>
-    </form>
-    <h2>Resultados da busca:</h2>
-    <ul>
-        {% for codigo, nome, valor in produtos %}
-        <li>{{ codigo }} - {{ nome }} - R$ {{ valor }}</li>
-        {% endfor %}
-    </ul>
+    <header>
+        <h1>Buscar Produtos</h1>
+    </header>
+    <main>
+        <form method="post">
+            <input type="text" name="termo_busca" placeholder="Digite o termo de busca">
+            <button type="submit">Buscar</button>
+        </form>
+        <h2>Resultados:</h2>
+        <ul>
+            {% for codigo, nome, valor in produtos %}
+            <li><strong>{{ nome }}</strong> — Código: {{ codigo }} — R$ {{ valor }}</li>
+            {% endfor %}
+        </ul>
+    </main>
 </body>
 </html>

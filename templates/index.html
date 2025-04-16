@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
     <title>FIAP - Loja Virtual</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #e60000;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 30px;
+            background-color: #e60000;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background-color: #cc0000;
+        }
+    </style>
 </head>
 <body>
-    <h1>Página Inicial</h1>
-    <p>Bem-vindo à página inicial!</p>
-
-    <h1>Buscar Produto</h1>
-    <a href="/buscar">Buscar Produto</a>    
-
-    <h1>Atualizar Produto</h1>
-    <a href="/atualizar">Atualizar Produto</a>
-
+    <header>
+        <h1>FIAP - Loja Virtual</h1>
+    </header>
+    <main>
+        <p>Bem-vindo à nossa loja virtual. O que você deseja fazer?</p>
+        <a href="/buscar">🔍 Buscar Produtos</a>
+        <a href="/atualizar">🛠 Atualizar Produtos</a>
+    </main>
 </body>
 </html>

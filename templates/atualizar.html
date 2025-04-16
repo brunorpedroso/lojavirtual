@@ -1,16 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Página de Atualização de Produto</title>
+    <meta charset="UTF-8">
+    <title>Atualizar Produto</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff9900;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e68a00;
+        }
+    </style>
 </head>
 <body>
-    <h1>Atualizar Produto</h1>
-    <form method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" value="{{ produto.nome }}">
-        <label for="preco">Preço:</label>
-        <input type="text" id="preco" name="preco" value="{{ produto.preco }}">
-        <button type="submit">Atualizar</button>
-    </form>
+    <header>
+        <h1>Atualizar Produto</h1>
+    </header>
+    <main>
+        <form method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" value="{{ produto.nome }}">
+
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco" value="{{ produto.preco }}">
+
+            <button type="submit">Atualizar</button>
+        </form>
+    </main>
 </body>
 </html>
